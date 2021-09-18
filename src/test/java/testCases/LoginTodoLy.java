@@ -16,7 +16,7 @@ public class LoginTodoLy {
 
     @BeforeEach
     public void before(){
-        Session.getSession().getDriver().get("https://todo.ly/");
+        Session.getSession().getDriver().get("https://todoist.com/");
     }
 
     @AfterEach
@@ -31,21 +31,22 @@ public class LoginTodoLy {
     @Issue("BUG8888")
     public void verifyTheLogin(){
 
-        mainPage.loginButton.click();
+        /*mainPage.loginButton.click();
         loginModal.emailTxt.fillText("jbowasp57@jbowasp57.com");
         loginModal.passwordTxt.fillText("12345");
-        loginModal.loginButon.click();
+        loginModal.loginButon.click();*/
 
         // Assertion.assertFalse(loginModal.loginButon.i
-        Assertions.assertFalse(loginModal.loginButon.isControlDisplayed(), "Error");
+        //Assertions.assertFalse(loginModal.loginButon.isControlDisplayed(), "Error");
 
-        /*mainPage.linkLogin.click();
+        mainPage.linkLogin.click();
 
         loginModal.emailTxt.fillText("ing.melindacastro@gmail.com");
         loginModal.passwordTxt.fillText("merliss1707");
         loginModal.loginButon.click();
 
-        Assertions.assertTrue(home.listMenu.isControlDisplayed(), "Satisfactorio");*/
+        //Assertions.assertTrue(home.listMenu.isControlDisplayed(), "Satisfactorio");
+        Assertions.assertFalse(loginModal.loginButon.isControlDisplayed(), "Error");;
 
     }
 }
