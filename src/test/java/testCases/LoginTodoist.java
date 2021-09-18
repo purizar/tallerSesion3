@@ -31,21 +31,12 @@ public class LoginTodoLy {
     @Issue("BUG8888")
     public void verifyTheLogin(){
 
-        /*mainPage.loginButton.click();
-        loginModal.emailTxt.fillText("jbowasp57@jbowasp57.com");
-        loginModal.passwordTxt.fillText("12345");
-        loginModal.loginButon.click();*/
-
-        // Assertion.assertFalse(loginModal.loginButon.i
-        //Assertions.assertFalse(loginModal.loginButon.isControlDisplayed(), "Error");
-
         mainPage.linkLogin.click();
 
         loginModal.emailTxt.fillText("ing.melindacastro@gmail.com");
         loginModal.passwordTxt.fillText("merliss1707");
         loginModal.loginButon.click();
 
-        //Assertions.assertTrue(home.listMenu.isControlDisplayed(), "Satisfactorio");
         Assertions.assertFalse(loginModal.loginButon.isControlDisplayed(), "Error");;
 
     }
